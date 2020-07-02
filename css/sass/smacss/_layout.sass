@@ -1,0 +1,320 @@
+////////////////////////////////////////////////
+// WRAPPING
+////////////////////////////////////////////////
+
+.container-limit
+  max-width: $wi-site
+
+.container-page
+  padding-top: 51px
+
+////////////////////////////////////////////////
+// LOADING
+////////////////////////////////////////////////
+
+.page-loading
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  background-color: $cp-wht-li
+  cursor: pointer
+  z-index: 999999
+  height: 100vh
+
+  @include animation(page-loading 4s ease forwards)
+  @include keyframes(page-loading)
+    0%
+      height: 100vh
+      opacity: 1
+    60%
+      opacity: 1
+    99%
+      opacity: 0
+      height: 100vh
+    100%
+      opacity: 0
+      height: 0
+
+  .page-loading-content
+    text-align: center
+    padding-top: 30vh
+
+    @include animation(page-loading-content 4s ease forwards)
+    @include keyframes(page-loading-content)
+      0%
+        height: 100vh
+        opacity: 1
+      60%
+        opacity: 1
+      99%
+        opacity: 0
+        height: 100vh
+        padding-top: 30vh
+      100%
+        opacity: 0
+        height: 0
+        padding: 0
+
+  h3 sup
+    font-size: $fs-md
+
+  .fa
+    font-size: $fs-lg
+
+  .page-loading-default
+    @include animation(page-loading-content 2s ease forwards)
+    @include keyframes(page-loading-content)
+      0%
+        height: 100vh
+        opacity: 1
+      60%
+        opacity: 1
+      99%
+        opacity: 0
+        height: 100vh
+      100%
+        opacity: 0
+        height: 0
+    img
+      height: 10vh
+      margin-bottom: 10vh
+    .fa
+      font-size: $fs-xxl
+
+.page-loading-ajax
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background: rgba(0,0,0,0.8)
+  z-index: 999999
+  .chart-loading-text
+    height: 100%
+    position: relative
+    padding: 45vh 15px 15px 15px
+    width: 100vw
+    justify-content: center
+    align-items: center
+    color: $cp-wht-md
+    text-align: center
+    font-size: $fs-lg
+    .fa
+      font-size: $fs-xxl
+
+////////////////////////////////////////////////
+// HEADER
+////////////////////////////////////////////////
+
+.header
+  padding-top: 52px
+
+  .navbar
+    background-color: $cp-wht-md
+    @include box-shadow(0px -1px 5px 0px rgba(0,0,0,0.5))
+
+    .navbar-right
+      padding-right: 15px
+
+    .navbar-standard > li:first-child > a, .navbar-toggle
+      border-color: $cp-sec-text
+      color: $cp-blk-md
+      font-size: $fs-md
+      line-height: 32px
+      padding-top: 10px
+      padding-bottom: 10px
+
+      & > span.icon-bar
+        background-color: $cp-blk-li
+
+      &:hover, &:focus
+        background-color: $cp-pri-dk
+        span.icon-bar
+          background-color: $cp-wht-md
+
+    .navbar-nav > li:first-child > a
+      //padding-right: 10px
+
+    .dropdown-menu
+      background-color: $cp-wht-li !important
+
+      a
+        color: $cp-blk-md
+        padding-top: 10px
+        padding-bottom: 10px
+
+      .divider
+        background-color: $cp-blk-dk!important
+
+    .navbar-collapse ul a
+      border-bottom: 1px solid $cp-wht-dk!important
+      color: $cp-blk-md
+
+  .user-alert-list .dropdown-toggle
+    background-color: transparent !important
+    border-bottom: 1px solid transparent !important
+    color: $cp-gry-md !important
+    line-height: 20px !important
+    padding: 8px 10px 7px 10px !important
+    margin: 8px 0
+    &.unread
+      color: $cp-acc-dk !important
+    &:hover, &:focus
+      border-color: $cp-acc-dk !important
+
+  .user-name > a
+    display: inline-block
+    background-color: transparent !important
+    border-bottom: 1px solid transparent !important
+    line-height: 20px !important
+    padding: 8px 10px 7px 10px
+    margin: 8px 10px 8px 0
+    &:hover, &:focus
+      color: $cp-pri-dk !important
+      border-color: $cp-acc-dk !important
+
+  .navbar-logo
+    padding-top: 9px
+    img
+      max-height: 38px
+
+  .navbar-search
+    padding-top: 8px
+    .form-control
+      height: 38px
+
+  .btn
+    border-radius: 4px
+    margin: 8px 10px 8px 0
+    padding: 6px 8px
+    &:focus, &:hover
+      background-color: $cp-pri-dk !important
+      border-color: $cp-pri-dk !important
+
+.wrap-menu
+  @include transition(all 0.5s ease)
+  @include box-shadow(-1px 0px 5px 0px rgba(0,0,0,0.5))
+  position: fixed
+  right: -300px
+  top: 0
+  bottom: 0
+  opacity: 0
+  width: 250px
+  background-color: $cp-wht-md
+  border-right: 1px solid $cp-gry-li
+  z-index: 1029
+  &.active
+    right: 0
+    opacity: 1
+  .wrap-menu-inner
+    position: absolute
+    top: 57px
+    bottom: 0
+    left: 0
+    right: 0
+    overflow-y: auto
+    padding: 10px 0
+
+.main-menu
+  a
+    display: block
+    padding: 10px 20px
+    color: $cp-blk-md
+    &:hover, &:focus, &.active
+      background-color: $cp-acc-dk
+      color: $cp-wht-li
+  li:first-child a
+    border-color: transparent
+  .sep
+    margin: 10px 0
+
+.main-menu-toggle.active
+  background-color: $cp-pri-dk !important
+  color: $cp-wht-li !important
+  .icon-bar
+    background-color: $cp-wht-li !important
+
+////////////////////////////////////////////////
+// CONTENT
+////////////////////////////////////////////////
+
+.content
+  position: relative
+  min-height: 100vh
+  transition: all 0.5s ease-in-out 0s
+
+  .content-header, .content-footer
+    background-color: $cp-wht-md
+
+    h3
+      margin: 0
+      padding: 25px 0 15px 0
+
+    .btn
+      margin: 7px 0 0 0
+
+      &.btn-trans:hover, &.btn-trans:focus
+        background-color: $cp-pri-md !important
+        color: $cp-wht-md
+
+  .content-header
+    border-bottom: 1px solid $cp-wht-dk
+    margin-bottom: 15px
+
+    .nav-tabs
+      padding-top: 17px
+      text-align: right
+    .input-group
+      padding-top: 12px
+      .btn
+        margin: 0
+
+  .content-footer
+    border-top: 1px solid $cp-wht-dk
+    margin-top: 15px
+
+////////////////////////////////////////////////
+// FOOTER
+////////////////////////////////////////////////
+
+.footer
+  @include box-shadow(0px 1px 5px 0px rgba(0,0,0,0.5))
+  border-top: 1px solid $cp-wht-dk
+  background-color: $cp-wht-md
+  color: $cp-blk-md
+  min-height: 5vh
+  padding: 15px 0
+  margin-top: 30px
+
+  a
+    color: $cp-blk-md
+
+    &:hover, &:focus
+      color: $cp-blk-dk
+
+////////////////////////////////////////////////
+// MISC
+////////////////////////////////////////////////
+
+.l-fw
+  width: 100%
+  display: inline-block
+
+.closed
+  opacity: 0
+  transform: translateY(-600px)
+  transition: all 0.5s ease-in-out 0s
+  z-index: -1
+
+.open, .forcedopen
+  opacity: 1
+  transform: translateY(0px)
+  transition: all 0.5s ease-in-out 0s
+  z-index: 1199
+
+.forcedopen > .dropdown-menu
+  display: block
+.forcedopen > a
+  color: #555
+  background-color: #e7e7e7

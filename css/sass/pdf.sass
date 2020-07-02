@@ -1,0 +1,263 @@
+//@import "smacss/_utils"
+
+@import "smacss/_vars"
+@import "smacss/_mixin"
+@import "smacss/_base"
+@import "smacss/_utils"
+
+.pdf-debug
+  .page
+    height: 942px
+    width: 695px
+    padding: 0
+    margin: 0 auto 20px auto
+    background-color: #F1F1F1
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+
+    &:before, &:after
+      position: relative
+      width: auto
+      height: auto
+      content: ' '
+      left: 0
+      bottom: 0
+      background: transparent
+      -webkit-transform: skew(0deg) rotate(0deg)
+      -moz-transform: skew(0deg) rotate(0deg)
+      -ms-transform: skew(0deg) rotate(0deg)
+      -o-transform: skew(0deg) rotate(0deg)
+      transform: skew(0deg) rotate(0deg)
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+
+    &:after
+      left: auto
+      right: 12px
+      -webkit-transform: skew(5deg) rotate(5deg)
+      -moz-transform: skew(5deg) rotate(5deg)
+      -ms-transform: skew(5deg) rotate(5deg)
+      -o-transform: skew(5deg) rotate(5deg)
+      transform: skew(5deg) rotate(5deg)
+
+  &.pdf-landscape .page
+    width: 942px
+    height: 695px
+
+@page
+  //background-repeat: no-repeat
+  @include background-size(contain)
+  background-position: center center
+  background-image-resize: 6
+  background-color: #F1F1F1
+
+@page
+  background-image: url("#{$im-dir}/pdf/report-landscape-front.png")
+  background-position: bottom left
+  odd-footer-name: footer2
+
+
+@page middle
+  background-image: url("#{$im-dir}/pdf/report-landscape-middle.png")
+  odd-footer-name: footer1
+
+@page logo
+  background-image: url("#{$im-dir}/pdf/report-landscape-middle-logo.png")
+  odd-footer-name: footer1
+
+@page logo2
+  background-image: url("#{$im-dir}/pdf/report-landscape-middle-logo-2.png")
+  odd-footer-name: footer1
+
+@page logo3
+  background-image: url("#{$im-dir}/pdf/report-landscape-middle-logo-3.png")
+  odd-footer-name: footer1
+
+@page icon
+  background-image: url("#{$im-dir}/pdf/report-landscape-middle-icon.png")
+  odd-footer-name: footer1
+
+@page back
+  background-image: url("#{$im-dir}/pdf/report-landscape-back.png")
+  background-position: bottom right
+  odd-footer-name: _blank
+
+@page back2
+  background-image: url("#{$im-dir}/pdf/report-landscape-back-2.png")
+  background-position: bottom right
+  odd-footer-name: _blank
+
+.page-front
+  page: front
+.page-front-2
+  page: front2
+.page-back
+  page-break-before: always
+  page: back
+.page-back-2
+  page-break-before: always
+  page: back2
+.page-middle
+  page-break-before: always
+  page: middle
+.page-middle-2
+  page-break-before: always
+  page: logo3
+.page-logo
+  page-break-before: always
+  page: logo
+.page-logo-2
+  page-break-before: always
+  page: logo2
+.page-logo-3
+  page-break-before: always
+  page: logo3
+.page-icon
+  page-break-before: always
+  page: icon
+
+.pdf-footer-left
+  color: $cp-wht-li
+  font-size: 10px
+  padding-left: 60px
+.pdf-footer-middle
+  text-align: center
+  font-size: 14px
+  .highlight
+    font-weight: bold
+.pdf-footer-right
+  color: $cp-wht-li
+  text-align: right
+  font-size: 12px
+  padding-right: 50px
+
+.pdf-footerFront
+  .pdf-footer-right
+    text-align: justify
+
+.pdf-landscape
+  .page-front
+    .page-content
+      padding: 360px 50px 0 550px
+    h1
+      font-family: $ff-sec
+      font-size: 42px
+      padding-left: 50px
+    h2
+      font-size: 30px
+      text-align: right
+      margin: 0
+    p
+      font-size: 11px
+      text-align: justify
+      padding-top: 130px
+  .page-front-2
+    .page-content
+      color: $cp-wht-li
+      padding: 250px 40px 0 60px
+    h1
+      font-family: $ff-sec
+      font-size: 34px
+      font-weight: bold
+      text-align: left
+      margin-bottom: 0px
+    h2
+      font-size: 24px
+      text-align: left
+      margin: 0
+      padding-top: 20px
+      padding-left: 5px
+    p
+      font-size: 11px
+      text-align: justify
+      padding-top: 130px
+
+.report-country
+  .page-front
+    .page-content
+      padding: 250px 40px 0 5px
+      color: $cp-wht-li
+	
+      h2
+        padding-left: 55px
+        text-align: left
+	
+  .page-title
+    h1
+      font-size: 60px
+      text-align: center
+      padding-top: 350px
+
+  .page-text
+    h1
+      font-size: 40px
+      padding: 80px 150px 0 75px
+      margin-bottom: 75px
+    .list-group-item
+      padding: 4px 30px
+
+  .page-chart
+    h1
+      font-size: 40px
+      padding: 80px 150px 0 75px
+      margin-bottom: 0
+    .chart-image
+      padding: 0 50px
+      image
+        width: 100%
+
+.report-market
+  .page-title
+    h1
+      font-size: 60px
+      text-align: center
+      padding-top: 350px
+
+  .page-text
+    h1
+      font-size: 40px
+      padding: 20px 75px 40px 75px
+      margin-bottom: 75px
+    li
+      padding: 4px 30px
+
+  .page-chart
+    h1
+      font-size: 40px
+      padding: 20px 75px 40px 75px
+      margin-bottom: 0
+    .chart-image
+      padding: 0 50px
+      image
+        width: 100%
+
+.pdf-download
+  .page-chart
+    h1
+      font-size: 40px
+      padding: 20px 75px 40px 75px
+      margin-bottom: 0
+    .chart-image
+      padding: 0 50px
+      image
+        width: 100%
+
+  .page-table
+    h1
+      font-size: 40px
+      padding: 20px 75px 40px 75px
+      margin-bottom: 0
+    .chart-table
+      background-color: #F1F1F1
+      padding: 20px 50px 0 50px
+      table
+        width: 100%
+        border-spacing: 0
+        border-collapse: collapse
+      td, th
+        font-size: 11px
+        text-align: right
+      tr:nth-child(even)
+        background-color: $cp-wht-li

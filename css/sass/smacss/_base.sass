@@ -1,0 +1,83 @@
+////////////////////////////////////////////////
+// BASE ELEMENTS
+////////////////////////////////////////////////
+
+html
+  overflow-y: scroll
+  font-size: 62.5%
+  height: 100%
+
+body
+  background-color: $cp-wht-li
+  color: $cp-blk-dk
+  font-family: $ff-pri
+  font-weight: $fw-md
+  font-size: $fs-md
+  -webkit-font-smoothing: antialiased
+
+a
+  color: $cp-acc-dk
+  outline: 0 !important
+  text-decoration: none
+  @include transition(all 0.2s linear)
+  &:hover, &:focus
+    color: $cp-pri-md
+    text-decoration: none
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5
+  font-family: $ff-sec
+  font-weight: $fw-dk
+  letter-spacing: -0.5px
+
+h1, .h1
+  font-size: $fs-xxxl
+
+h2, .h2
+  font-size: $fs-xxl
+
+h3, .h3
+  font-size: $fs-xl
+
+h4, .h4
+  font-size: $fs-sm
+  font-weight: $fw-li
+  text-transform: uppercase
+  letter-spacing: 2px
+
+h5, .h5
+  font-size: $fs-md
+
+h6, .h6
+  font-size: $fs-xs
+  font-weight: $fw-li
+  text-transform: uppercase
+
+p, ul, ol
+  font-size: $fs-md
+
+blockquote
+  border: none
+  font-weight: 300
+  line-height: 40px
+  font-size: $fs-lg
+  padding: 0px
+  letter-spacing: 0.5px
+  margin-bottom: 30px
+  width: 100%
+
+section
+  background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(52, 152, 219, 0.8) 100%)
+  background-image: url('#{$im-dir}bg/txt-1.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  background-position: center
+  overflow: hidden
+  position: relative
+  padding: 80px 0
+  -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.8)
+  -moz-box-shadow:    0px -3px 5px 0px rgba(0, 0, 0, 0.8)
+  box-shadow:         0px -3px 5px 0px rgba(0, 0, 0, 0.8)
+
+select option:disabled
+  color: $cp-wht-dk

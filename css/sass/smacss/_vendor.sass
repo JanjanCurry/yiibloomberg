@@ -1,0 +1,229 @@
+////////////////////////////////////////////////
+// ADDTHIS
+////////////////////////////////////////////////
+
+.addthis_inline_share_toolbox
+  text-align: center
+  padding-top: 20px
+
+
+/////////////////////////////////////////
+// BOOTSTRAP
+.navbar-inverse .dropdown-menu > li > a
+  &:hover, &:focus
+    color: $cp-blk-md
+
+.btn-toolbar
+  .btn-group
+    float: none
+
+.dropdown-menu li > a
+  display: block
+  padding: 3px 20px
+  clear: both
+  font-weight: 400
+  line-height: 1.42857143
+  color: #333
+  white-space: nowrap
+  &:hover, &:focus
+    color: #262626
+    text-decoration: none
+    background-color: #f5f5f5
+
+
+.dropdown-menu>.disabled>a, .dropdown-menu>.disabled>a:focus, .dropdown-menu>.disabled>a:hover
+  color: $cp-dan-li
+  opacity: 0.7
+
+.input-group-btn .btn
+  padding: 5px 15px
+
+.modal
+  &.fade
+    opacity: 1
+    .modal-dialog
+      @include transform(translate(0))
+
+  .modal-fw
+    left: 10vw
+    width: 80vw
+    position: absolute
+    max-height: 60vh
+    margin: 0
+
+  .modal-dialog
+    top: 20vh
+    .model-title
+      margin-top: 0
+    .modal-content
+      border-radius: 0
+    .modal-header
+      border: none
+    .modal-footer
+      border: none
+    .modal-body
+      min-height: 20vh
+      padding: 30px
+    .close
+      display: inline-block
+      font-weight: 400
+      line-height: 1.42857143
+      text-align: center
+      cursor: pointer
+      padding: 10px 15px
+      font-size: $fs-lg
+      transition: all 0.5s ease
+      float: none
+      position: absolute
+      top: 0
+      right: 0
+  &.fade-scale
+    transform: scale(2)
+    opacity: 0
+    -webkit-transition: all .25s linear
+    -o-transition: all .25s linear
+    transition: all .25s linear
+    &.in
+      opacity: 1
+      transform: scale(1)
+
+.modal-backdrop.in
+  opacity: 0.3
+
+.table
+  .btn
+    padding: 3px 10px
+    font-size: $fs-sm
+
+p.form-control
+  margin: 0
+
+.tooltip-lg
+  .tooltip-inner
+    min-width: 300px
+
+.tooltip-text-left
+  .tooltip-inner
+    text-align: left
+
+/////////////////////////////////////////
+// DATEPICKER
+.datepicker
+  .disabled
+    background-color: $cp-divider !important
+  tbody .disabled
+    display: none
+
+/////////////////////////////////////////
+// GOOGLE CHART
+.chart-group text
+  color: $cp-blk-dk !important
+  font-family: $ff-pri !important
+  font-weight: $fw-md !important
+  font-size: $fs-md !important
+  -webkit-font-smoothing: antialiased !important
+
+/////////////////////////////////////////
+// GOOGLE RE-CAPTCHA
+.captcha-center .g-recaptcha
+  width: 304px
+  margin: 0 auto
+
+/////////////////////////////////////////
+// SELECTPICKER
+.bootstrap-select
+  .btn
+    border: 1px solid #ccc
+    padding: 7px 25px 7px 15px
+    border-radius: 4px
+  li.selected a
+    font-weight: $fw-dk
+    color: $cp-pri-dk !important
+
+/////////////////////////////////////////
+// TINYMCE
+.mce-notification-warning
+  display: none !important
+
+/////////////////////////////////////////
+// TYPEAHEAD
+.twitter-typeahead
+  width: 100%
+
+.pac-container
+  z-index: 10001
+
+.form-typeahead
+  .form-control
+    border-top-left-radius: 4px !important
+    border-bottom-left-radius: 4px !important
+
+  .btn
+    border-top-right-radius: 4px !important
+    border-bottom-right-radius: 4px !important
+    line-height: 20px
+    font-size: 14px
+    padding: 6px 15px
+    background-color: $cp-wht-li
+    color: $cp-blk-md
+    position: relative
+    top: -2px
+    border: 1px solid #cccccc
+    border-left: none
+    &:hover, &:focus
+      color: $cp-wht-li
+      background-color: $cp-pri-dk
+      border-color: $cp-pri-dk
+  .btn-inverse
+    background-color: $cp-blk-md
+    color: $cp-wht-li
+
+.tt-menu
+  width: 100%
+  margin-top: 2px
+  padding: 5px 0
+  background-color: #ffffff !important
+  border: 1px solid $cp-blk-li
+  border-radius: 4px
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  background-clip: padding-box
+  .premium
+    color: $cp-dan-md
+
+.tt-suggestion
+  border-bottom: 1px solid $cp-wht-dk
+  cursor: pointer
+  display: block
+  margin: 0 10px
+  padding: 3px 5px
+
+  &:hover, &:focus
+    background-color: $cp-wht-dk
+
+  &.tt-is-under-cursor
+    color: #ffffff
+    background-color: #428bca
+    a
+      color: #ffffff
+  p
+    margin: 0
+
+.typeahead-scrollable .tt-menu
+  max-height: 260px
+  overflow-y: auto
+
+/////////////////////////////////////////
+// YII
+.breadcrumb
+  padding: 3px 30px
+  margin-bottom: 0
+  background-color: $cp-wht-md
+  border-radius: 0
+
+#breadcrumbs .crumb a
+  font-size: 1rem !important
+
+.errorMessage
+  text-align: right
+  color: $cp-dan-dk

@@ -1,0 +1,218 @@
+@each $size in $margin-list
+  $i: index($margin-list, $size)
+  .margin-top-#{$size}
+    margin-top: #{$size}px !important
+  .margin-bottom-#{$size}
+    margin-bottom: #{$size}px !important
+  .padding-top-#{$size}
+    padding-top: #{$size}px !important
+  .padding-bottom-#{$size}
+    padding-bottom: #{$size}px !important
+  .l-sep-#{$size}
+    margin: #{$size}px auto
+    background-color: $cp-acc-md
+    height: 2px
+    width: 60%
+  .l-section-#{$size}
+    padding: #{$size}px 0
+
+.visible-xxs
+  display: none !important
+
+/////////////////////////////////////////
+// Small devices only
+@media #{$m-xs}
+  .l-push-down-xs
+    margin-top: 20px
+
+  #main-nav .main-nav-wrap
+    overflow: scroll
+    height: 100%
+
+  .header
+    padding-top: 106px
+
+    .navbar-search
+      padding-bottom: 5px
+
+  .wrap-menu .wrap-menu-inner
+    top: 103px
+
+  .text-xs-left
+    text-align: left
+  .text-xs-right
+    text-align: right
+  .text-xs-center
+    text-align: center
+  .text-xs-justify
+    text-align: justify
+
+  @each $size in $margin-list
+    $i: index($margin-list, $size)
+    .margin-top-#{$size}-xs
+      margin-top: #{$size}px
+    .margin-bottom-#{$size}-xs
+      margin-bottom: #{$size}px
+    .padding-top-#{$size}-xs
+      padding-top: #{$size}px
+    .padding-bottom-#{$size}-xs
+      padding-bottom: #{$size}px
+
+  #notifications .notifications-container
+    left: 5%
+    right: 5%
+    top: 5%
+
+  .modal
+    .modal-dialog
+      top: 10vh
+      max-height: 80vh
+      left: 10vw
+      width: 80vw
+      .modal-body
+        min-height: 20vh
+
+  nav.navbar-inverse
+
+    .navbar-toggle
+      margin-top: 3px
+      margin-bottom: 3px
+
+    a.navbar-brand
+      max-height: 34px
+      margin: 3px 0
+
+    .navbar-nav > li a
+      padding: 10px 10px 10px 8px
+
+  .header-slider, .home-slider
+    .slide
+      h1
+        max-width: none
+      h2
+        display: none !important
+
+  .footer li
+    display: block
+
+/////////////////////////////////////////
+// Small devices landscape only - extended from @media $m-xs
+@media #{$m-xxs}
+  .l-push-down-xxs
+    margin-top: 20px
+
+  .text-xxs-left
+    text-align: left
+  .text-xxs-right
+    text-align: right
+  .text-xxs-center
+    text-align: center
+  .text-xxs-justify
+    text-align: justify
+
+  @each $size in $margin-list
+    $i: index($margin-list, $size)
+    .margin-top-#{$size}-xxs
+      margin-top: #{$size}px
+    .margin-bottom-#{$size}-xxs
+      margin-bottom: #{$size}px
+    .padding-top-#{$size}-xxs
+      padding-top: #{$size}px
+    .padding-bottom-#{$size}-xxs
+      padding-bottom: #{$size}px
+
+  .hidden-xxs
+    display: none !important
+  .visible-xxs
+    display: block !important
+
+/////////////////////////////////////////
+// Small devices only
+@media #{$m-sm}
+  .l-push-down-sm
+    margin-top: 20px
+
+  .text-sm-left
+    text-align: left
+  .text-sm-right
+    text-align: right
+  .text-sm-center
+    text-align: center
+  .text-sm-justify
+    text-align: justify
+
+  @each $size in $margin-list
+    $i: index($margin-list, $size)
+    .margin-top-#{$size}-md
+      margin-top: #{$size}px
+    .margin-bottom-#{$size}-md
+      margin-bottom: #{$size}px
+    .padding-top-#{$size}-md
+      padding-top: #{$size}px
+    .padding-bottom-#{$size}-md
+      padding-bottom: #{$size}px
+
+  .header .navbar-search
+    padding-bottom: 5px
+
+  .wrap-menu .wrap-menu-inner
+    top: 103px
+
+/////////////////////////////////////////
+// Medium devices only
+@media #{$m-md}
+  .l-push-down-md
+    margin-top: 20px
+
+  .text-md-left
+    text-align: left
+  .text-md-right
+    text-align: right
+  .text-md-center
+    text-align: center
+  .text-md-justify
+    text-align: justify
+
+  @each $size in $margin-list
+    $i: index($margin-list, $size)
+    .margin-top-#{$size}-lg
+      margin-top: #{$size}px
+    .margin-bottom-#{$size}-lg
+      margin-bottom: #{$size}px
+    .padding-top-#{$size}-lg
+      padding-top: #{$size}px
+    .padding-bottom-#{$size}-lg
+      padding-bottom: #{$size}px
+
+
+/////////////////////////////////////////
+// Large devices only
+@media #{$m-lg}
+  .l-push-down-lg
+    margin-top: 20px
+
+  .text-lg-left
+    text-align: left
+  .text-lg-right
+    text-align: right
+  .text-lg-center
+    text-align: center
+  .text-lg-justify
+    text-align: justify
+
+  @each $size in $margin-list
+    $i: index($margin-list, $size)
+    .margin-top-#{$size}-lg
+      margin-top: #{$size}px
+    .margin-bottom-#{$size}-lg
+      margin-bottom: #{$size}px
+    .padding-top-#{$size}-lg
+      padding-top: #{$size}px
+    .padding-bottom-#{$size}-lg
+      padding-bottom: #{$size}px
+
+@media #{"only screen and (max-height:550px)"}
+  .page-feedback-btns
+    display: none
+
+

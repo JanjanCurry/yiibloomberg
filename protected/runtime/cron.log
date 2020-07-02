@@ -1,0 +1,227 @@
+2020/02/27 00:47:01 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1477): CActiveRecord->getCommandBuilder()
+#7 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#8 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#9 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#10 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#13 {main}
+---
+2020/03/30 23:18:02 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1477): CActiveRecord->getCommandBuilder()
+#7 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#8 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#9 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#10 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#13 {main}
+---
+2020/03/30 23:19:01 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1477): CActiveRecord->getCommandBuilder()
+#7 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#8 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#9 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#10 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#13 {main}
+---
+2020/04/07 15:10:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYI' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_mail_outbox`.
+in /home/bbgci/public_html/protected/components/Mail.php (586)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (33)
+in /home/bbgci/public_html/cron.php (17)
+2020/04/07 15:10:01 [error] [exception.CDbException] CDbException: The table "db_mail_outbox" for active record class "DbMailOutbox" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbMailOutbox))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1358): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#5 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#9 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#10 {main}
+---
+2020/04/07 15:20:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYI' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_mail_outbox`.
+in /home/bbgci/public_html/protected/components/Mail.php (586)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (33)
+in /home/bbgci/public_html/cron.php (17)
+2020/04/07 15:20:01 [error] [exception.CDbException] CDbException: The table "db_mail_outbox" for active record class "DbMailOutbox" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbMailOutbox))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1358): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#5 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#9 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#10 {main}
+---
+2020/04/07 15:25:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYI' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_mail_outbox`.
+in /home/bbgci/public_html/protected/components/Mail.php (586)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (33)
+in /home/bbgci/public_html/cron.php (17)
+2020/04/07 15:25:02 [error] [exception.CDbException] CDbException: The table "db_mail_outbox" for active record class "DbMailOutbox" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbMailOutbox))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1358): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#5 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#9 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#10 {main}
+---
+2020/04/07 15:35:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYI' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_mail_outbox`.
+in /home/bbgci/public_html/protected/components/Mail.php (586)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (33)
+in /home/bbgci/public_html/cron.php (17)
+2020/04/07 15:35:02 [error] [exception.CDbException] CDbException: The table "db_mail_outbox" for active record class "DbMailOutbox" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbMailOutbox))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1358): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#5 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#9 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#10 {main}
+---
+2020/04/07 15:40:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYD' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_var`.
+in /home/bbgci/public_html/protected/commands/RunCommand.php (65)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (57)
+in /home/bbgci/public_html/cron.php (17)
+2020/04/07 15:40:01 [error] [exception.CDbException] CDbException: The table "db_var" for active record class "DbVar" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbVar))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1526): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/protected/commands/RunCommand.php(65): CActiveRecord->findByAttributes(Array)
+#4 /home/bbgci/public_html/protected/commands/RunCommand.php(57): RunCommand->cronCollision('minutely', 'sleep')
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#8 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#9 {main}
+---
+2020/05/09 12:05:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYI' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_mail_outbox`.
+in /home/bbgci/public_html/protected/components/Mail.php (586)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (33)
+in /home/bbgci/public_html/cron.php (17)
+2020/05/09 12:05:02 [error] [exception.CDbException] CDbException: The table "db_mail_outbox" for active record class "DbMailOutbox" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbMailOutbox))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1358): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#5 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#9 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#10 {main}
+---
+2020/05/09 12:15:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/tmp/#sql_b8ec_0.MYI' (Errcode: 28 - No space left on device). The SQL statement executed was: SHOW FULL COLUMNS FROM `db_mail_outbox`.
+in /home/bbgci/public_html/protected/components/Mail.php (586)
+in /home/bbgci/public_html/protected/commands/RunCommand.php (33)
+in /home/bbgci/public_html/cron.php (17)
+2020/05/09 12:15:01 [error] [exception.CDbException] CDbException: The table "db_mail_outbox" for active record class "DbMailOutbox" cannot be found in the database. in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(DbMailOutbox))
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1358): CActiveRecord->getTableSchema()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#5 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#7 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#9 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#10 {main}
+---
+2020/05/13 19:42:02 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1477): CActiveRecord->getCommandBuilder()
+#7 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#8 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#9 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#10 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#13 {main}
+---
+2020/05/13 19:43:01 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1477): CActiveRecord->getCommandBuilder()
+#7 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#8 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#9 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#10 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#13 {main}
+---
+2020/05/18 21:39:06 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory in /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(639): CApplication->getDb()
+#5 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 /home/bbgci/public_html/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1477): CActiveRecord->getCommandBuilder()
+#7 /home/bbgci/public_html/protected/components/Mail.php(586): CActiveRecord->findAll(Object(CDbCriteria))
+#8 /home/bbgci/public_html/protected/commands/RunCommand.php(33): Mail->sendPendingMail()
+#9 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): RunCommand->run(Array)
+#10 /home/bbgci/public_html/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /home/bbgci/public_html/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/bbgci/public_html/cron.php(17): CApplication->run()
+#13 {main}
+---

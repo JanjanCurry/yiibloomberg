@@ -1,0 +1,521 @@
+////////////////////////////////////////////////
+// ALERT
+////////////////////////////////////////////////
+
+#alertView
+  .modal-body
+    min-height: auto
+  .alert-content
+    p
+      font-size: $fs-lg
+    img
+      width: 100% !important
+      height: auto !important
+  p.alert-item-footer
+    font-size: $fs-sm
+    margin: 0
+    color: $cp-gry-dk
+
+.alert-items-full
+  .alert-item
+    position: relative
+    margin-bottom: 25px
+    left: 10px
+    padding: 20px
+    text-align: left
+    background-color: $cp-wht-md
+    color: $cp-blk-md
+    p
+      font-size: $fs-lg
+    img
+      width: 100% !important
+      height: auto !important
+    &:before
+      content: ''
+      width: 0
+      height: 0
+      position: absolute
+      left: -1em
+      top: 0
+      border-top: 1em solid $cp-wht-md
+      border-left: 1em solid transparent
+    .alert-item-footer
+      border-top: 1px dashed $cp-gry-dk
+      padding: 10px 0 0 0
+      font-size: $fs-sm
+      margin: 0
+      text-align: right
+
+////////////////////////////////////////////////
+// CAROUSEL
+////////////////////////////////////////////////
+
+.carousel
+  padding-top: 30px
+
+  .carousel-indicators
+    bottom: auto
+    top: 0
+    li
+      margin: 0 3px
+      border-color: $cp-blk-md
+      &.active
+        background-color: $cp-blk-md
+
+  &.carousel-fade
+    position: relative
+
+    .carousel-inner
+      .item
+        transition-property: opacity
+
+      .item, .active.left, .active.right
+        opacity: 0
+
+      .active, .next.left, .prev.right
+        opacity: 1
+
+      .next, .prev, .active.left, .active.right
+        left: 0
+        transform: translate3d(0, 0, 0)
+
+    .carousel-control
+      z-index: 2
+
+
+////////////////////////////////////////////////
+// CHARTS
+////////////////////////////////////////////////
+
+.chart-group, .chart-print
+  position: relative
+
+  .chart-group-container
+    position: relative
+    min-height: 264px
+    border: 1px solid $cp-wht-dk
+    margin-bottom: 15px
+    padding: 5px 15px 15px 15px
+    opacity: 0.7
+    @include transition(height 0.5s ease-in-out 0s)
+    @include transition(opacity 0.5s ease-in-out 0s)
+
+    &:hover, &:focus
+      opacity: 1
+      @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.4))
+
+  .chart-group-header
+    padding-bottom: 15px
+
+  .chart-item-chart-container
+    overflow-y: visible
+    overflow-x: auto
+    z-index: 500
+    .chart-item-chart
+      margin-top: -25px
+      min-width: 850px
+      overflow: hidden
+    .chart-item-chart.chart-no-legend
+      width: 110%
+
+  .chart-item-legend, .chart-print-legend
+    text-align: center
+    z-index: 300
+    ul
+      margin: 0
+    .chart-legend-item
+      @include transition(all 0.2s linear)
+      cursor: pointer
+      color: $cp-acc-md
+      &.active
+        color: $cp-blk-md
+      &:hover, &:focus
+        color: $cp-pri-md
+
+  .chart-item-sublegend
+    text-align: center
+    ul
+      margin: 0
+      font-size: $fs-sm
+
+  .chart-item-table
+    table
+      thead
+        th
+          word-wrap: break-word
+          white-space: nowrap
+        .text-forecast
+          width: 1.3em
+          height: 1.3em
+          line-height: 1.3em
+          .fa-circle
+            font-size: $fs-md
+          .fa-info-circle
+            font-size: 0.8em
+            font-weight: $fw-dk
+            color: $cp-wht-li
+            margin: 0
+
+      tbody
+        th, td
+          word-wrap: break-word
+          white-space: nowrap
+        .text-forecast
+          font-style: italic
+          color: $cp-gry-dk
+
+    .table-trade thead th:nth-child(-n+3)
+      text-align: left
+      width: 15%
+
+    .table-macro thead th:nth-child(-n+3)
+      text-align: left
+      width: 15%
+
+    .table-confidence-1
+      color: $cp-dan-md
+    .table-confidence-2
+      color: $cp-war-md
+    .table-confidence-3
+      color: $cp-suc-md
+    .correlation-row-info
+      .correlation-row-top
+        float: left
+        padding: 10px 15px 0 0
+
+
+  .chart-item-header
+    padding-bottom: 10px
+
+    .chart-item-title + .tooltip
+      left: 0 !important
+
+  .chart-loading
+    display: none
+    width: 100%
+    top: 0
+    bottom: 0
+    position: absolute
+    background: rgba(0,0,0,0.8)
+    .chart-loading-text
+      height: 100%
+      position: relative
+      //display: flex
+      padding-top: 100px
+      justify-content: center
+      align-items: center
+      color: $cp-wht-md
+      text-align: center
+      .fa
+        font-size: $fs-lg
+  &.add-fav
+    .chart-item-header
+      .chart-item-title
+        display: block
+        line-height: 220px
+        width: 100%
+        text-align: center
+
+  .chart-item-title
+    font-weight: $fw-dk
+    padding: 9px 0 10px 0
+    display: block
+    margin: 0
+
+  .chart-notes, .chart-item-source
+    text-align: center
+    display: none
+
+  .watchlist-search-btn
+    padding: 10px 0 0 0
+
+
+.list-group-item-disabled
+  background-color: $cp-wht-md !important
+  color: $cp-dan-dk !important
+  cursor: not-allowed
+  opacity: 0.7
+.list-group-item-selected
+  background-color: $cp-pri-dk !important
+  color: $cp-wht-md !important
+  opacity: 0.7
+  font-weight: $fw-dk
+  &.list-group-item-disabled
+    background-color: $cp-dan-dk !important
+
+.chart-print
+  .chart-print-item
+    opacity: 0
+    top: 0
+    height: 0
+    overflow: hidden
+    z-index: -1
+    width: 1200px
+    position: relative
+    &.chart-print-processing
+      height: auto !important
+      overflow: auto !important
+  .chart-print-chart-box
+    opacity: 0
+    height: 0
+    overflow: hidden
+  .chart-print-chart
+    width: 100%
+    //height: 590px
+    height: 400px
+  .chart-print-legend
+    ul
+      padding: 30px 0 10px 0
+    li
+      font-size: 16px !important
+
+.chart-group-spark
+  .chart-group-container
+    min-height: 0 !important
+  .chart-item-chart
+    min-width: 0 !important
+    margin: 0 !important
+
+.chart-spark
+  position: relative
+  border-radius: 0
+  min-height: 95px
+  .spark-edit-btn
+    position: absolute
+    right: 5px
+    top: 0
+  .spark-name
+    display: block
+    font-weight: $fw-dk
+    font-size: $fs-md
+    a
+      color: $cp-blk-md
+  .spark-name-group
+    display: block
+    font-weight: $fw-md
+    font-size: $fs-xs
+    text-transform: uppercase
+  .spark-icon
+    display: block
+    font-size: $fs-xl
+    line-height: 1
+    padding: 3px 0
+  .spark-value
+    display: block
+    font-size: $fs-lg
+    font-family: $ff-sec
+    font-weight: $fw-dk
+    line-height: 1
+
+
+////////////////////////////////////////////////
+// FLASHES
+////////////////////////////////////////////////
+
+#notifications
+  cursor: pointer
+  .notifications-overlay
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    position: fixed
+    z-index: 9998
+    background-color: rgba($cp-blk-md,0.4)
+
+  .notifications-container
+    left: 25%
+    right: 25%
+    top: 40%
+    position: fixed
+    z-index: 9999
+    .alert
+      font-size: $fs-lg
+      cursor: pointer
+      @include box-shadow(0 0 3px 1px rgba($cp-blk-dk, 0.4))
+      ul
+        list-style-type: none
+
+      li
+        padding: 4px 30px 4px 0
+        font-size: $fs-lg
+
+      .alertClose
+        opacity: 0.7
+        padding: 0 20px
+        &:hover, &:focus
+          opacity: 1
+
+
+////////////////////////////////////////////////
+// TOUR
+////////////////////////////////////////////////
+
+.tour
+  .tour-step-background
+    border-radius: 0
+
+  .tour-lock
+    content: ""
+    background-color: transparent
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    opacity: 0
+    z-index: 1102
+  //display: none
+
+  .tour.popover.orphan
+    z-index: 1103
+
+  &.tour-step-1
+    .navbar-fixed-top
+      position: absolute
+      z-index: auto
+      .twitter-typeahead
+        z-index: 1101
+
+  &.tour-step-2
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+
+  &.tour-step-3
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+    .btn-group.forcedopen .dropdown-toggle
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
+
+  &.tour-step-4
+    #chartTradeModal
+      z-index: 1101
+
+  &.tour-step-5
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+
+  &.tour-step-6
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+    .btn-group.forcedopen .dropdown-toggle
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
+
+  &.tour-step-7
+    #chartTimeModal
+      z-index: 1101
+
+  &.tour-step-8
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+
+  &.tour-step-9
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+    .btn-group.forcedopen .dropdown-toggle
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
+
+  &.tour-step-10
+    #chartTradeModal
+      z-index: 1101
+
+  &.tour-step-12
+    .chart-group-container
+      background-color: $cp-wht-li
+      z-index: 1101
+    .btn-group.forcedopen .dropdown-toggle
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
+
+  &.tour-step-13
+    #chartCompareModal
+      z-index: 1101
+
+  &.tour-step-14
+    .navbar-fixed-top
+      position: absolute
+      z-index: auto
+    #tour-step-14
+      z-index: 1101
+
+////////////////////////////////////////////////
+// VIDEO
+////////////////////////////////////////////////
+
+.flex-video
+  position: relative
+  padding-bottom: 56.25% /* 16:9 */
+  height: 0
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+////////////////////////////////////////////////
+// MISC
+////////////////////////////////////////////////
+
+.form-group
+  &.disabled, &.loading
+    position: relative !important
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      background-color: rgba($cp-blk-md, 0.2)
+      z-index: 10
+      border-radius: 4px
+  &.disabled:before
+    cursor: not-allowed
+  &.loading:before
+    cursor: wait
+.form-typeahead
+  &.loading:before, &.disabled:before
+    bottom: 5px
+
+
+.help-block
+  font-style: italic
+  font-size: $fs-sm
+
+.iframe-mail
+  border: none
+  height: 500px
+  width: 100%
+
+.page-feedback-btns
+  position: fixed
+  @include transform(rotate(-90deg))
+  height: 36px
+  width: 310px
+  right: -137px
+  bottom: 25%
+  .page-feedback-btn
+    border-top-right-radius: 4px !important
+    border-top-left-radius: 4px !important
+    opacity: 0.8
+    text-transform: none !important
+    font-size: 16px !important
+    line-height: 16px !important
+    padding: 8px 10px !important
+    font-family: $ff-sec
+    margin: 0 5px
+
+  &:hover, &:focus
+    opacity: 1
+
+.toggleBtn
+  position: relative
+  .fa-caret-down, .fa-caret-right
+    position: absolute
+    right: 10px

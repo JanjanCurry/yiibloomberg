@@ -1,0 +1,89 @@
+.page-dashboard
+  .spark-carousel
+    margin-left: -15px
+    margin-right: -15px
+    padding: 0
+    .slick-arrow
+      display: none !important
+    .slick-slide:nth-child(even) .chart-spark
+      background-color: rgba($cp-wht-md, 0.3)
+  .dashboard-chart-nav
+    max-height: 656px
+    overflow-y: auto
+    .active
+      background-color: $cp-pri-dk
+      color: $cp-wht-li
+  .dash-outlook-item-btn
+    position: relative
+    display: block
+    padding-right: 15px
+    i
+      position: absolute
+      right: 0
+  .dash-group-g10
+    .chart-group
+      .chart-group-container
+        min-height: 0
+        .chart-item-chart
+          height: 630px
+  .dash-group-yoy, .dash-group-outlook
+    .chart-group
+      .chart-group-container
+        min-height: 0
+        .chart-item-chart
+          height: 150px
+
+.country-report
+  .report-data
+    position: fixed
+    top: 0
+    opacity: 0
+    z-index: -1
+    overflow: hidden
+    .chart-group
+      background-color: #F1F1F1
+
+.advanced-search
+  .search-list-nav
+    .active
+      background-color: $cp-acc-dk !important
+      border-color: $cp-acc-dk !important
+  .search-list
+    .search-list-header
+      display: none
+
+.page-how-to
+  .panel
+    .panel-heading
+      padding: 0
+      h4
+        font-weight: $fw-dk
+        font-size: $fs-lg
+        cursor: pointer
+        display: block
+        padding: 15px
+        margin: 0
+        text-transform: none
+        font-size: $fs-xl
+        .caret-icon:after
+          content: "\f0d7"
+          font-family: "FontAwesome"
+          font-size: $fs-lg
+          width: 20px
+          height: 20px
+          display: inline-block
+        &.collapsed .caret-icon:after
+          content: "\f0da"
+  .howto-video
+    padding-bottom: 30px
+    h4
+      text-transform: none
+      font-weight: $fw-dk
+
+    p
+      text-align: justify
+    .sep
+      position: absolute
+      bottom: 15px
+      margin: 0
+      width: 100%

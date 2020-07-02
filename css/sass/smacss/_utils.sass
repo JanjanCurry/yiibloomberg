@@ -1,0 +1,385 @@
+////////////////////////////////////////////////
+// ALERT
+////////////////////////////////////////////////
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .alert-#{$group}
+    background-color: $dk
+    border-color: $dk
+    color: $cp-wht-li
+
+////////////////////////////////////////////////
+// BADGE
+////////////////////////////////////////////////
+
+.badge
+  font-size: $fs-sm
+  font-weight: $fw-li
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .badge-#{$group}
+    background-color: rgba($dk, 0.8)
+
+////////////////////////////////////////////////
+// BUTTON
+////////////////////////////////////////////////
+
+.btn
+  border-radius: 0
+  padding: 10px 15px
+  font-size: $fs-md
+  text-transform: uppercase
+  border-width: 2px
+  outline: none !important
+  @include transition(all 0.5s ease)
+  &:hover, &:focus
+    outline: none !important
+  &.btn-round
+    border-radius: 50px
+  &.btn-sm
+    font-size: $fs-sm !important
+    padding: 5px 10px !important
+  &.btn-lg
+    font-size: $fs-md !important
+  &.btn-hg
+    font-size: $fs-lg !important
+  .badge
+    font-size: $fs-xxs
+    top: -5px
+    transition: all 0.5s ease
+  &:hover, &:focus
+    .badge-primary
+      background-color: $cp-pri-li
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $md: nth($color-ref-list-md, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .btn-#{$group}
+    @if $group == accent
+      background-color: $cp-acc-dk
+      border-color: $cp-acc-dk
+    @else if $group == primary
+      background-color: $cp-blk-li
+      border-color: $cp-blk-li
+    @else
+      background-color: $dk
+      border-color: $dk
+    color: $cp-wht-li
+    &:hover, &:focus
+      color: $cp-wht-li
+      @if $group == accent
+        background-color: $cp-pri-dk
+        border-color: $cp-pri-dk
+      @else if $group == primary
+        background-color: $cp-pri-dk
+        border-color: $cp-pri-dk
+      @else if $group == white
+        background-color: $cp-blk-md
+        border-color: $cp-blk-md
+      @else if $group == black
+        background-color: $cp-wht-li
+        border-color: $cp-wht-li
+        color: $cp-blk-md
+      @else
+        background-color: $md
+        border-color: $md
+
+.btn
+  &.btn-disabled
+    background-color: $cp-wht-md
+    border-color: $cp-wht-md
+    color: $cp-blk-li
+    cursor: not-allowed
+    &:hover, &:focus
+      background-color: $cp-wht-md
+      border-color: $cp-wht-md
+      color: $cp-blk-li
+  &.btn-trans
+    background-color: transparent
+    border-color: transparent
+    color: $cp-blk-md
+    &:hover, &:focus
+      background-color: $cp-pri-dk
+      border-color: $cp-pri-dk
+      color: $cp-wht-li
+  &.btn-inverse
+    background-color: $cp-blk-md
+    color: $cp-wht-li
+
+////////////////////////////////////////////////
+// CARDS
+////////////////////////////////////////////////
+
+.well
+  position: relative
+  background-color: $cp-wht-li
+  border: 1px solid $cp-wht-dk
+  &.well-inline
+    display: inline-block
+    margin: 0 auto
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .panel-#{$group}
+    color: $cp-wht-li
+    background-color: $dk
+  .well-#{$group}
+    color: $cp-wht-li
+    background-color: $dk
+
+////////////////////////////////////////////////
+// DEVICE
+////////////////////////////////////////////////
+
+.visible-xxs
+  display: none !important
+
+@media #{$m-xxs}
+  .hidden-xxs
+    display: none !important
+  .visible-xxs
+    display: block !important
+
+////////////////////////////////////////////////
+// FLEX GRID
+////////////////////////////////////////////////
+
+//.row-flex, .row-flex > div[class*='col-']
+//  display: -webkit-box
+//  display: -moz-box
+//  display: -ms-flexbox
+//  display: -webkit-flex
+//  display: flex
+//  flex: 1 1 auto
+//
+//.row-flex-wrap
+//  -webkit-flex-flow: row wrap
+//  align-content: flex-start
+//  flex: 0
+//
+//.row-flex > div[class*='col-'], .container-flex > div[class*='col-']
+//  margin: -.2px
+//
+//.container-flex > div[class*='col-'] div, .row-flex > div[class*='col-'] div
+//  width: 100%
+//
+//.flex-col
+//  display: flex
+//  display: -webkit-flex
+//  flex: 1 100%
+//  flex-flow: column nowrap
+//
+//.flex-grow
+//  display: flex
+//  -webkit-flex: 2
+//  flex: 2
+
+.row-flex
+  display: flex
+  flex-wrap: wrap
+  margin-right: -15px
+  margin-left: -15px
+  & > div[class*='col-']
+    display: flex
+    flex-direction: column
+
+////////////////////////////////////////////////
+// POSITIONING
+////////////////////////////////////////////////
+
+.margin-0
+  margin: 0 !important
+.padding-0
+  padding: 0 !important
+
+@each $size in $margin-list
+  $i: index($margin-list, $size)
+  .section-#{$size}
+    padding: #{$size}px 0
+  .margin-top-#{$size}
+    margin-top: #{$size}px !important
+  .margin-bottom-#{$size}
+    margin-bottom: #{$size}px !important
+  .padding-top-#{$size}
+    padding-top: #{$size}px !important
+  .padding-bottom-#{$size}
+    padding-bottom: #{$size}px !important
+
+.sep-wide
+  width: 100% !important
+
+.sep-short
+  width: 20% !important
+
+@for $i from 1 through length($media-list-size)
+  $mediaSize: nth($media-list-size, $i)
+  $ref: nth($media-list-ref, $i)
+  @media #{$mediaSize}
+    @each $size in $margin-list
+      $i: index($margin-list, $size)
+      .margin-top-#{$size}\-#{$ref}
+        margin-top: #{$size}px
+      .margin-bottom-#{$size}\-#{$ref}
+        margin-bottom: #{$size}px
+      .padding-top-#{$size}\-#{$ref}
+        padding-top: #{$size}px
+      .padding-bottom-#{$size}\-#{$ref}
+        padding-bottom: #{$size}px
+
+@each $size in $margin-list
+  $i: index($margin-list, $size)
+  .section-#{$size}
+    padding: #{$size}px 0
+  .mt-#{$size}
+    margin-top: #{$size}px !important
+  .mr-#{$size}
+    margin-right: #{$size}px !important
+  .mb-#{$size}
+    margin-bottom: #{$size}px !important
+  .ml-#{$size}
+    margin-left: #{$size}px !important
+  .my-#{$size}
+    margin-top: #{$size}px !important
+    margin-bottom: #{$size}px !important
+  .mx-#{$size}
+    margin-left: #{$size}px !important
+    margin-right: #{$size}px !important
+  .pt-#{$size}
+    padding-top: #{$size}px !important
+  .pr-#{$size}
+    padding-right: #{$size}px !important
+  .pb-#{$size}
+    padding-bottom: #{$size}px !important
+  .pl-#{$size}
+    padding-left: #{$size}px !important
+  .py-#{$size}
+    padding-top: #{$size}px !important
+    padding-bottom: #{$size}px !important
+  .px-#{$size}
+    padding-left: #{$size}px !important
+    padding-right: #{$size}px !important
+
+@for $i from 1 through length($media-list-size)
+  $mediaSize: nth($media-list-size, $i)
+  $ref: nth($media-list-ref, $i)
+  @media #{$mediaSize}
+    @each $size in $margin-list
+      $i: index($margin-list, $size)
+      .mt-#{$size}\-#{$ref}
+        margin-top: #{$size}px
+      .mr-#{$size}\-#{$ref}
+        margin-right: #{$size}px
+      .mb-#{$size}\-#{$ref}
+        margin-bottom: #{$size}px
+      .ml-#{$size}\-#{$ref}
+        margin-left: #{$size}px
+      .my-#{$size}\-#{$ref}
+        margin-top: #{$size}px
+        margin-bottom: #{$size}px
+      .mx-#{$size}\-#{$ref}
+        margin-left: #{$size}px
+        margin-right: #{$size}px
+      .pt-#{$size}\-#{$ref}
+        padding-top: #{$size}px
+      .pr-#{$size}\-#{$ref}
+        padding-right: #{$size}px
+      .pb-#{$size}\-#{$ref}
+        padding-bottom: #{$size}px
+      .pl-#{$size}\-#{$ref}
+        padding-left: #{$size}px
+      .py-#{$size}\-#{$ref}
+        padding-top: #{$size}px
+        padding-bottom: #{$size}px
+      .px-#{$size}\-#{$ref}
+        padding-left: #{$size}px
+        padding-right: #{$size}px
+
+
+////////////////////////////////////////////////
+// PROGRESS BAR
+////////////////////////////////////////////////
+
+.progress-bar
+  box-shadow: none
+
+.progress-small
+  height: 15px
+  margin: 5px 0 0 0
+  .progress-bar
+    height: 15px
+    line-height: 15px
+    font-size: 11px
+    padding: 0 5px
+    text-align: right
+
+.progress-mini
+  height: 5px
+  margin: 5px 0 0 0
+  .progress-bar
+    height: 5px
+    margin-bottom: 0
+
+.progress-multi
+  position: relative
+  .progress-bar
+    position: absolute
+    top: 0
+    left: 0
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $md: nth($color-ref-list-md, $i)
+  .progress-bar-#{$group}
+    background-color: rgba($md, 0.9)
+
+////////////////////////////////////////////////
+// SEPERATOR
+////////////////////////////////////////////////
+
+.sep
+  margin: 60px auto
+  height: 1px
+  width: 100%
+  background-color: transparent
+  border: none
+  border-top: 2px solid $cp-pri-md
+  &.sep-xs
+    width: 20%
+  &.sep-sm
+    width: 40%
+  &.sep-md
+    width: 60%
+  &.sep-lg
+    width: 80%
+
+////////////////////////////////////////////////
+// TEXT
+////////////////////////////////////////////////
+
+.text-italic
+  font-style: italic
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $md: nth($color-ref-list-md, $i)
+  .text-#{$group}
+    color: $md !important
+
+@for $i from 1 through length($media-list-size)
+  $mediaSize: nth($media-list-size, $i)
+  $ref: nth($media-list-ref, $i)
+  @media #{$mediaSize}
+    .text-#{$ref}-left
+      text-align: left
+    .text-#{$ref}-right
+      text-align: right
+    .text-#{$ref}-center
+      text-align: center
+    .text-#{$ref}-justify
+      text-align: justify
